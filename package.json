@@ -1,6 +1,6 @@
 {
   "name": "exp_swagger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Auto generate swagger ui without writing swagger docs.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
