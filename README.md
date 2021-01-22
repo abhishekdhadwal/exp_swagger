@@ -1,6 +1,6 @@
 # EXPRESS SWAGGER
 
-Auto generate swagger ui without wrting swagger docs.
+Auto generate swagger ui without writing swagger docs.
 
 ## Installation
 
