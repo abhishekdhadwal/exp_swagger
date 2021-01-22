@@ -67,12 +67,12 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/abhishekdhadwal/express_swagger/issues"
+    "url": "https://github.com/abhishekdhadwal/exp_swagger/issues"
   },
-  "homepage": "https://github.com/abhishekdhadwal/express_swagger.git",
+  "homepage": "https://github.com/abhishekdhadwal/exp_swagger.git",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abhishekdhadwal/express_swagger.git"
+    "url": "https://github.com/abhishekdhadwal/exp_swagger.git"
   },
   "author": "Abhishek Dhadwal"
 }
