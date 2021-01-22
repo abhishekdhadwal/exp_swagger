@@ -1,0 +1,78 @@
+{
+  "name": "exp_swagger",
+  "version": "1.0.0",
+  "description": "Auto generate swagger ui without writing swagger docs.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf ./build/*",
+    "build": "npm run clean && tsc",
+    "start": "npm run build && node build/index.js",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "jest --detectOpenHandles",
+    "test:coverage": "jest --coverage --collectCoverageFrom=src/**/*.ts --detectOpenHandles",
+    "test:watch": "jest --watchAll",
+    "prettier": "prettier --write \"**/*.ts\"",
+    "pretest": "npm run build",
+    "prepare": "npm run build",
+    "release": "node_modules/np/source/cli.js --no-cleanup",
+    "git:clean": "git branch --merged | egrep -v \"(^\\*|master|staging|develop)\" | xargs git branch -d",
+    "git:clean-remote": "git remote prune origin"
+  },
+  "precommit": [
+    "lint",
+    "build"
+  ],
+  "dependencies": {
+    "@hapi/joi": "^15.1.1",
+    "@types/ramda": "^0.26.41",
+    "celebrate": "^10.0.1",
+    "express": "^4.17.1",
+    "joi-to-swagger": "git://github.com/ShopBonsai/joi-to-swagger.git",
+    "ramda": "^0.27.1",
+    "swagger-ui-express": "4.1.2"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.0",
+    "@types/hapi__joi": "~15.0.4",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^14.14.22",
+    "coveralls": "^3.0.9",
+    "jest": "^24.9.0",
+    "np": "^5.0.3",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.3.0",
+    "tslint": "^5.20.1",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.7.4"
+  },
+  "peerDependencies": {
+    "@hapi/joi": "~15.1.1",
+    "celebrate": "~10.0.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [
+    "NodeJS",
+    "Easy",
+    "Express",
+    "API",
+    "Joi",
+    "Schema"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekdhadwal/express_swagger/issues"
+  },
+  "homepage": "https://github.com/abhishekdhadwal/express_swagger.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekdhadwal/express_swagger.git"
+  },
+  "author": "Abhishek Dhadwal"
+}
