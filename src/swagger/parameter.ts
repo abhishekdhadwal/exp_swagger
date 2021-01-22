@@ -1,8 +1,9 @@
-const j2s = require('joi-to-swagger');
 
+const j2s = require('joi-to-swagger');
+const lodash = require('lodash');
 import { IInput, ISwaggerDefinition, ISchema } from '../interfaces';
 import { getDefinition } from './definition';
-import lodash from 'lodash';
+// import lodash from 'lodash';
 
 
 export const getParameters = (swagger: ISwaggerDefinition, input?: IInput) => {
